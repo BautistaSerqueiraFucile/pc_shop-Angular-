@@ -9,6 +9,7 @@ import { PcCarritoComponent } from './pc-carrito/pc-carrito.component';
 import { FormsModule } from '@angular/forms';
 import { PcAboutComponent } from './pc-about/pc-about.component';
 import { PcComputersComponent } from './pc-computers/pc-computers.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PcComputersComponent } from './pc-computers/pc-computers.component';
     PcListComponent,
     PcCarritoComponent,
     PcAboutComponent,
-    PcComputersComponent
+    PcComputersComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

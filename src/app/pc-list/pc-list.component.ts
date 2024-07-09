@@ -36,16 +36,4 @@ export class PcListComponent {
     quantity: 0,
   }
 ]
-
-upQuantity(Pc: Pc): void{
-  if(Pc.quantity<Pc.stock){
-    Pc.quantity++;
-  }
-}
-
-downQuantity(Pc: Pc): void{
-  if(Pc.quantity>0){
-    Pc.quantity--;
-  }
-}
 }
