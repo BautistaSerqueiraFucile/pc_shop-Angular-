@@ -6,6 +6,7 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
@@ -14,7 +15,12 @@
             <td>{{Pc.name}}</td>
             <td>{{Pc.type}}</td>
             <td>{{Pc.price|currency}}</td>
-            <td ><span *ngIf="Pc.stock==0" class="badge text-bg-danger">Sin Stock</span></td>
+            <td><span *ngIf="Pc.stock==0" class="badge text-bg-danger">Sin Stock</span></td>
+            <td>
+                <button class="btn" (click)="downQuantity(Pc)">-</button>
+                <input type="text" [(ngModel)]="Pc.quantity">
+                <button class="btn" (click)="upQuantity(Pc)">+</button>
+            </td>
         </tr>
     </tbody>
 </table>

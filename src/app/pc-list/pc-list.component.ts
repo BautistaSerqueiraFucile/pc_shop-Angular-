@@ -15,6 +15,7 @@ export class PcListComponent {
     stock: 12,
     image: 'img/gamer.webp',
     oferta: false,
+    quantity: 0,
   },
   {
     name: 'Hollywood',
@@ -23,6 +24,7 @@ export class PcListComponent {
     stock: 7,
     image: 'img/design.jfif',
     oferta: true,
+    quantity: 0,
   },
   {
     name: 'Obra Maestra',
@@ -31,6 +33,19 @@ export class PcListComponent {
     stock: 0,
     image: 'img/editing.jfif',
     oferta: false,
+    quantity: 0,
   }
 ]
+
+upQuantity(Pc: Pc): void{
+  if(Pc.quantity<Pc.stock){
+    Pc.quantity++;
+  }
+}
+
+downQuantity(Pc: Pc): void{
+  if(Pc.quantity>0){
+    Pc.quantity--;
+  }
+}
 }

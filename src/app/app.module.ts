@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { PcListComponent } from './pc-list/pc-list.component';
 import { PcCarritoComponent } from './pc-carrito/pc-carrito.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { PcCarritoComponent } from './pc-carrito/pc-carrito.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
