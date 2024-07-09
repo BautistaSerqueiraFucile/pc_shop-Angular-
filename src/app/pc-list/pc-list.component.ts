@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Pc } from './Pc';
 
 @Component({
   selector: 'app-pc-list',
@@ -6,11 +7,30 @@ import { Component } from '@angular/core';
   styleUrl: './pc-list.component.scss'
 })
 export class PcListComponent {
-  pc_gamer = {
-    "name":"Master Race",
-    "type":"Gamer",
-    "price":"1000000",
-    "stock":"12",
-    "image":"img/gamer.webp"
+  Pcs: Pc[] = [
+    {
+    name: 'Master Race',
+    type: 'Gamer',
+    price: 1000000,
+    stock: 12,
+    image: 'img/gamer.webp',
+    oferta: false,
+  },
+  {
+    name: 'Hollywood',
+    type: 'Diseño',
+    price: 700000,
+    stock: 7,
+    image: 'img/design.jfif',
+    oferta: true,
+  },
+  {
+    name: 'Obra Maestra',
+    type: 'Edicion',
+    price: 950000,
+    stock: 0,
+    image: 'img/editing.jfif',
+    oferta: false,
   }
+]
 }
