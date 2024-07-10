@@ -7,3 +7,8 @@ export interface Pc{
     oferta: boolean;
     quantity: number;
 }
+
+export interface PcItem{
+    pc: Pc;
+    quantity: number;
+}

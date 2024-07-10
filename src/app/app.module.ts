@@ -11,6 +11,8 @@ import { PcAboutComponent } from './pc-about/pc-about.component';
 import { PcComputersComponent } from './pc-computers/pc-computers.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
