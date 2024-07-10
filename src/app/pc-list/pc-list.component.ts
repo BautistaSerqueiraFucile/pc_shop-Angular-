@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Pc } from './Pc';
+import { PcCartService } from '../pc-cart.service';
 
 @Component({
   selector: 'app-pc-list',
@@ -7,6 +8,7 @@ import { Pc } from './Pc';
   styleUrl: './pc-list.component.scss'
 })
 export class PcListComponent {
+
   Pcs: Pc[] = [
     {
     name: 'Master Race',
@@ -36,4 +38,18 @@ export class PcListComponent {
     quantity: 0,
   }
 ]
+
+constructor(private cart: PcCartService){
+}
+
+addToCart(Pc: Pc){
+  this.cart.addToCart(Pc)
+  Pc.stock -= Pc.quantity;
+  Pc.quantity = 0;
+}
+
+maxReached(msj: string){
+  alert(msj);
+}
+
 }

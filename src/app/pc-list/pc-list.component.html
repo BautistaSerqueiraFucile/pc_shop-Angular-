@@ -17,8 +17,9 @@
             <td>{{Pc.type}}</td>
             <td>{{Pc.price|currency}}</td>
             <td><span *ngIf="Pc.stock==0" class="badge text-bg-danger">Sin Stock</span></td>
-            <td>
-                <app-input-integer [Pc]="Pc" *ngIf="Pc.stock>0"></app-input-integer>
+            <td *ngIf="Pc.stock>0">
+                <app-input-integer (maxReached)="maxReached($event)" [(quantity)]="Pc.quantity" [max]="Pc.stock"></app-input-integer>
+                <button class="btn" (click)="addToCart(Pc)">Añadir</button>
             </td>
         </tr>
     </tbody>
