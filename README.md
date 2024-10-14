@@ -4,3 +4,5 @@ Link stackblitz: https://stackblitz.com/~/github.com/BautistaSerqueiraFucile/pc_
 Nombre y Apellido: Bautista Serqueira Fucile
 DNI: 44535647
 Sede: Quequen
+
+https://bautistaserqueirafucile.github.io/pc_shop-Angular-/
